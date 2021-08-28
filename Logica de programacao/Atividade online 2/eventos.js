@@ -46,13 +46,18 @@ for (let contador = 0; contador < qtdParticipantes; contador++) {
 }
 
 // Validação Da Idade
-let idadeInscrito = 17;
-if (idadeInscrito >=18) {
-    console.log("Maior de Idade, Cadastro Liberado!")
-    console.log("Digitar o Nome Completo!")
+
+let dataNascimento = new Date ("1987", "01", "14");
+
+let anos = (dataAtual.getUTCFullYear() - dataNascimento.getUTCFullYear());
+
+if (anos >= 18) {
+    console.log("Participante Tem " + anos + " Maior De Idade.")
 } else {
-    console.log("Menor de Idade, Cadastro Liberado!")
+    console.log("Participante Tem " + anos + " Menor De Idade.")
+    console.log("Cadastro Não Permitido.")
 }
+
 
 
 // Listar Participantes
